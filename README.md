@@ -15,7 +15,7 @@ Meanwhile, the compiled output files will be generated in the `bin` folder by de
 
 ## Dependency Management
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+....The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
 Text editor Intro
 The project involves building a text editor in Java, using Java Swing for creating a graphical user interface.
 The text editor will have a window (frame) with a menu bar, consisting of two menus - file menu and edit menu.
