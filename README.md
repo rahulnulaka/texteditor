@@ -16,52 +16,44 @@ Meanwhile, the compiled output files will be generated in the `bin` folder by de
 ## Dependency Management
 
 ....The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
-Text editor Intro
-The project involves building a text editor in Java, using Java Swing for creating a graphical user interface.
-The text editor will have a window (frame) with a menu bar, consisting of two menus - file menu and edit menu.
-The file menu will have features like new window, save file and open file.
-The edit menu will have five functions - Cut, Copy, Paste, select All and Close button.
-The text area inside the window will be used for writing and editing the text.
-The project demo shows a simple text editor created using Java Swing, with two menus (file and edit) and multiple features within each menu.
-Users can write and edit text inside the text area.
-Text editor Building UI
-you will be creating a basic UI for a text editor project in Java using Java Swing components.
-In the previous video, we discussed the design for the text editor window application.
-We are creating a new project in Intellij for the text editor and naming it text data".
-We select Java as the language and Intellij as the build system, and choose Open JDK 8 as the preferred JDK version.
-we refactor the main class to be called "text editor".
-we create a constructor for the text editor class and call it in the main function to create an instance of the text editor application.
-To create an application window, we use the Jframe class from the Java Swing package.
-we declare a data member "frame" and initialize it as a new Jframe with dimensions 400x400.
-we make the frame visible and set the layout.
-The resulting application window is a simple window with dimensions 400x400.
-Text editor Adding Action Listeners
-The video discusses Action Listener classes and action events. The current project has a basic UI with menus and a text area, but clicking on the menu items does not result in any action. Action events occur when a button is clicked or a checkbox is checked/unchecked, or a menu item is selected. To listen to these action events, we need to implement the Action Listener class and override its action performed method. In the action performed method, we define the action to be taken when a specific action event occurs, based on the event source. To implement this in our text editor class, we need to implement the action performed method from the Action Listener interface and override it.
-Text editor Adding File Menu Functionalities
-The video discusses how to implement file menu functionalities.
-The file menu has three features: new window, open file, and save file.
-The open file feature will be built first, followed by the save file feature.
-The structure of open file and save file is similar, so they will be built together.
-To open a file, a file chooser is triggered by clicking on the open menu item.
-The user must select the file path and file to open and click on the open button.
-The text contained in the file will be copied and pasted into the text area.
-When the open button is clicked, an action event is triggered.
-The action performed method listens to the action event.
-The JFileChooser class is used to open the file chooser.
-When the save button is clicked, the text inside the text area is saved to the file.
-The first step in the open file function is to open the file chooser.
-Text editor Adding File Menu Functionalities Part 2
-The video focuses on implementing file menu functionalities, specifically the save file functionality.
-The save file functionality is similar to the open file functionality in terms of selecting the file path and name using a file picker.
-The difference is that instead of copying and pasting the text to the text area, the save file functionality gets the text from the text area and saves it to a new file.
-To implement the save file functionality, a new "if" statement is created to check if the action event source is the save file functionality.
-A file chooser is initialized to select the file path and name using the show save dialog method, which displays a save button as the approve option.
-A new file is created with the chosen directory path and file name using the File object.
-The text from the text area is saved to the new file.
-Text editor Final touch
-This video, talks about adding finishing touches to the application's UI and discusses the need for scroll bars to make the UI more user-friendly.
-To add scroll bars, the first step is to add horizontal and vertical scroll bars. The structure of the application's UI involves a J frame, menu bar, and text area.
-To make the text area scrollable, it needs to be wrapped inside a scroll pane class inside Java Swing. The scroll pane makes everything inside it scrollable, and it needs to be contained inside a panel.
-The new structure of the UI involves a panel that contains the scroll pane and the text area. Borders can also be added inside the panel to make it more visually appealing.
-In the constructor, the text area needs to be added to the panel, and the panel needs to be added to the scroll pane. The scroll pane needs to be made scrollable only when the text goes beyond the borders of the application.
-The code for adding scroll bars involves creating a scroll pane with vertical and horizontal scroll bars as needed and adding the scroll pane to the panel.
+
+- Text editor Intro:
+  - The project involves building a text editor in Java, using Java Swing for creating a graphical user interface.
+  - The text editor will have a window (frame) with a menu bar, consisting of two menus - file menu and edit menu.
+  - The file menu will have features like new window, save file, and open file.
+  - The edit menu will have five functions - Cut, Copy, Paste, Select All, and Close button.
+  - The text area inside the window will be used for writing and editing the text.
+- Text editor Building UI:
+  - Creating a basic UI for a text editor project in Java using Java Swing components.
+  - Creating a new project in IntelliJ named "text data" with Java as the language and IntelliJ as the build system.
+  - Choosing Open JDK 8 as the preferred JDK version.
+  - Refactoring the main class to be called "text editor" and creating a constructor for the text editor class.
+  - Calling the constructor in the main function to create an instance of the text editor application.
+  - Using the JFrame class to create an application window.
+  - Declaring a data member "frame" and initializing it as a new JFrame with dimensions 400x400.
+  - Making the frame visible and setting the layout.
+- Text editor Adding Action Listeners:
+  - Discussing Action Listener classes and action events.
+  - Implementing the ActionPerformed method from the Action Listener interface to listen to action events.
+  - Defining the action to be taken when a specific action event occurs, based on the event source.
+- Text editor Adding File Menu Functionalities:
+  - Implementing file menu functionalities such as new window, open file, and save file.
+  - Using JFileChooser to open the file chooser and allowing the user to select the file path and file to open.
+  - Copying and pasting the text from the file into the text area.
+  - Triggering an action event when the open button is clicked and listening to it in the ActionPerformed method.
+  - Saving the text from the text area to a new file when the save button is clicked.
+- Text editor Adding File Menu Functionalities Part 2:
+  - Implementing the save file functionality similar to the open file functionality.
+  - Checking if the action event source is the save file functionality using an "if" statement.
+  - Initializing a file chooser to select the file path and name using the show save dialog method.
+  - Creating a new file with the chosen directory path and file name using the File object.
+  - Saving the text from the text area to the new file.
+- Text editor Final touch:
+  - Adding finishing touches to the application's UI.
+  - Adding scroll bars to make the UI more user-friendly.
+  - Wrapping the text area inside a scroll pane class to make it scrollable.
+  - Creating a panel that contains the scroll pane and the text area.
+  - Adding borders inside the panel to enhance the visual appeal.
+  - Adding the text area to the panel and the panel to the scroll pane in the constructor.
+  - Making the scroll pane scrollable only when the text goes beyond the borders of the application.
+  - Adding scroll bars by creating a scroll pane with vertical and horizontal scroll bars as needed and adding it to the panel.
